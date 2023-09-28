@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
 
 function App() {
+  const [guessResult, setGuessResult] = useState(false)
+  const colours = ["Red", "Blue", "Green", "Orange", "Purple", "Yellow"];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <h1>Mastermind</h1>
+
+      <div>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Available Colours: "Red", "Blue", "Green", "Orange", "Purple", "Yellow"
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </div>
+
+      { guessResult &&
+        <div>
+          <p>Wrong Guess</p>
+        </div>
+      }
+      <button onClick={() => setGuessResult(true)}>
+        Guess
+      </button>
     </div>
   );
 }
