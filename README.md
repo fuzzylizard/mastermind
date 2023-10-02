@@ -24,7 +24,7 @@ A combination can contain any number of pegs but you’d better give the same nu
 
 ## Suggested Test Cases
 
-For a secret [blue, red, green, pink] and a guess [yellow, red, blue, purple] the answer should be : 1 well placed and 1 misplaced.
+For a secret `[blue, red, green, pink]` and a guess `[yellow, red, blue, purple]` the answer should be : 1 well placed and 1 misplaced.
 
 Some other basic examples:
 
